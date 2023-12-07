@@ -7,13 +7,13 @@ function NavBar() {
   return (
     <>
       <div className="flex p-3 m-3 justify-between">
-        <div className="flex">
-          <img src={Menu}></img>
-          <img className="" src={Logo}></img>
+        <div className="flex ">
+          <img className="object-contain" src={Menu}></img>
+          <img className="object-contain pl-3" src={Logo}></img>
         </div>
-        <div className="flex">
-          <img src={Cart} alt="cart" />
-          <img className="w-7" src={Profile} alt="profile" />
+        <div className="flex ">
+          <img className="object-contain " src={Cart} alt="cart" />
+          <img className="w-5 h-auto ml-5" src={Profile} alt="profile" />
         </div>
 
         {/** */}
