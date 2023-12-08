@@ -6,7 +6,7 @@ import Profile from "../images/image-avatar.png";
 function NavBar() {
   return (
     <>
-      <div className="flex p-3 m-3 justify-between">
+      <div className="flex  m-6 justify-between">
         <div className="flex ">
           <img className="object-contain" src={Menu}></img>
           <img className="object-contain pl-3" src={Logo}></img>

@@ -16,6 +16,12 @@ export default {
       fontFamily: {
         FEKumbhSans: ["Kumbh Sans"],
       },
+      letterSpacing: {
+        1: "0.2em",
+        2: "0.3em",
+        3: "0.4em",
+        4: "0.5em",
+      },
     },
   },
   plugins: [],
