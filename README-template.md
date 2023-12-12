@@ -67,9 +67,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 1. Image Slideshow
 
-Images are located inside public folder(not process by webpack). (if src/images, the images can be used using import, require() or import js file(eg. src/images/index.js))
+Images located inside public folder(not process by webpack). (if src/images, the images can be used using import, require() or import js file(eg. src/images/index.js))
 
-- Create JSON file
+- Create JSON file(src/images.json)
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
