@@ -1,24 +1,37 @@
+import { useState } from "react";
 import Cart from "../images/icon-cart.svg";
 import Minus from "../images/icon-minus.svg";
 import Plus from "../images/icon-plus.svg";
 
 function PriceItem() {
+  const [quantity, setQuantity] = useState(0);
+
+  const Add = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const Remove = () => {
+    setQuantity(quantity === 0 ? 0 : quantity - 1);
+  };
+
   return (
     <div className="font-FEKumbhSans m-6">
       <div className="flex justify-between items-center mb-5">
         <div className=" font-bold text-4xl">$125.00</div>
-        <div className=" text-FEOrange bg-FEPaleOrange font-bold">50%</div>
+        <div className=" text-FEOrange bg-FEPaleOrange font-bold py-1 px-2 rounded-lg">
+          50%
+        </div>
         <div className=" text-FEGrayishBlue deco font-bold line-through">
           $250.00
         </div>
       </div>
       <div className="flex justify-between items-center bg-FELightGrayishBlue py-4 px-5 rounded-xl mb-5">
-        <img className=" object-contain" src={Minus} alt="" />
-        <div>0</div>
-        <img className="object-contain" src={Plus} alt="" />
+        <img className=" object-contain" onClick={Remove} src={Minus} alt="" />
+        <div className="font-bold">{quantity}</div>
+        <img className="object-contain" onClick={Add} src={Plus} alt="" />
       </div>
       <div className="flex items-center justify-center bg-FEOrange py-4 rounded-xl">
-        <img src={Cart} alt="" />
+        <img src={Cart} className="" alt="" />
         <div className=" text-FEWhite font-bold">Add to cart</div>
       </div>
     </div>

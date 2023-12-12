@@ -19,12 +19,17 @@ function ImagePreview({ slides }) {
     <div className="relative">
       <img src={slides[imageIndex].img} alt="" />
       <img
-        className=" absolute top-1/2"
+        className="flex absolute top-1/2 left-3 bg-white rounded-full px-4 py-3"
+        src={Previous}
+        onClick={PreviousImage}
+        alt="previous"
+      />
+      <img
+        className="flex absolute top-1/2 right-3  bg-white rounded-full px-4 py-3"
         src={Next}
         onClick={NextImage}
-        alt=""
+        alt="next"
       />
-      <img className="relative" src={Previous} onClick={PreviousImage} alt="" />
     </div>
   );
 }
