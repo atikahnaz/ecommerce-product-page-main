@@ -6,10 +6,16 @@ import ImagePreview from "./components/ImagePreview";
 import Slides from "./images.json";
 
 function App() {
+  const item = {
+    name: "Fall Limited Edition Sneakers",
+    img: 
+    price: 125.0,
+    quantity: 3,
+  };
   return (
     <>
       <div className="">
-        <NavBar />
+        <NavBar item={item} />
         <ImagePreview slides={Slides} />
 
         <InfoItem />

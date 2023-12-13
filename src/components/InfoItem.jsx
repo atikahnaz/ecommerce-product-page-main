@@ -14,6 +14,9 @@ function PriceItem() {
     setQuantity(quantity === 0 ? 0 : quantity - 1);
   };
 
+  // callback function
+  const AddToCart = () => {};
+
   return (
     <div className="font-FEKumbhSans m-6">
       <div className="flex justify-between items-center mb-5">
@@ -30,7 +33,10 @@ function PriceItem() {
         <div className="font-bold">{quantity}</div>
         <img className="object-contain" onClick={Add} src={Plus} alt="" />
       </div>
-      <div className="flex items-center justify-center bg-FEOrange py-4 rounded-xl">
+      <div
+        className="flex items-center justify-center bg-FEOrange py-4 rounded-xl"
+        onClick={AddToCart}
+      >
         <img src={Cart} className="" alt="" />
         <div className=" text-FEWhite font-bold">Add to cart</div>
       </div>
