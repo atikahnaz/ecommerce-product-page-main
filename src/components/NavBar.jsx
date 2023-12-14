@@ -31,9 +31,33 @@ function NavBar({ item }) {
       </div>
 
       {cartVisible && (
-        <div className="fixed top-24 z-10 w-full h-full flex justify-center">
-          <div className=" bg-white w-11/12 h-2/5">
-            <h2>cart is empty</h2>
+        <div className="font-FEKumbhSans text-base absolute top-24 z-10 w-full h-full flex justify-center">
+          <div className=" bg-white w-11/12 h-2/5 p-4">
+            <div className=" font-bold mb-4">Cart</div>
+            <div>-----</div>
+            <div className="flex justify-between my-5">
+              <img
+                className=" w-12 h-12 rounded-md"
+                src="src/images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+              <div className=" text-FEDarkGrayishBlue">
+                <div className="">Fall Limited Edition Sneakers</div>
+                <div className="flex">
+                  <div>$125.00</div>
+                  <div> x 3 </div>
+                  <div className=" text-FEVeryDarkBlue font-bold">$375.00</div>
+                </div>
+              </div>
+              <img
+                className=" object-contain"
+                src="src/images/icon-delete.svg"
+                alt=""
+              />
+            </div>
+            <div className=" bg-FEOrange text-FEWhite text-center rounded-lg py-3 font-bold">
+              Checkout
+            </div>
           </div>
         </div>
       )}

@@ -8,7 +8,7 @@ import Slides from "./images.json";
 function App() {
   const item = {
     name: "Fall Limited Edition Sneakers",
-    img: 
+    img: "Slide[0].img",
     price: 125.0,
     quantity: 3,
   };
