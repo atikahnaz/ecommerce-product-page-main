@@ -10,7 +10,7 @@ function App() {
     name: "Fall Limited Edition Sneakers",
     img: "Slide[0].img",
     price: 125.0,
-    quantity: 3,
+    quantity: 2,
   };
   return (
     <>
