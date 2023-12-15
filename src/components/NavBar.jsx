@@ -1,15 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../images/logo.svg";
 import Menu from "../images/icon-menu.svg";
 import Cart from "../images/icon-cart.svg";
 import Profile from "../images/image-avatar.png";
 
-function NavBar({ item }) {
+function NavBar({ item, toRemove }) {
   const [cartItem, setCartItem] = useState(item);
   const [cartVisible, setCartVisible] = useState(false);
 
+  useEffect(() => {
+    setCartItem(item);
+  }, [item]);
+
   const ViewCart = () => {
     setCartVisible(cartVisible === false ? true : false);
+  };
+
+  const Delete = () => {
+    toRemove();
   };
 
   return (
@@ -34,9 +42,12 @@ function NavBar({ item }) {
         <div className="font-FEKumbhSans text-base absolute top-24 z-10 w-full h-full flex justify-center">
           <div className=" bg-white w-11/12 h-2/5 p-4 rounded-md">
             <div className=" font-bold mb-3">Cart</div>
-            <div>-----</div>
+            <div
+              className=" border-b-2"
+              style={{ padding: 0, margin: 0 }}
+            ></div>
             {cartItem.quantity > 0 ? (
-              <div>
+              <div className="flex flex-col w-full h-full">
                 <div className="flex justify-between my-5">
                   <img
                     className=" w-12 h-12 rounded-md"
@@ -50,7 +61,7 @@ function NavBar({ item }) {
                       <div> x </div>
                       <div>{cartItem.quantity}</div>
                       <div className=" text-FEVeryDarkBlue font-bold">
-                        $375.00
+                        ${cartItem.price * cartItem.quantity}.00
                       </div>
                     </div>
                   </div>
@@ -58,6 +69,7 @@ function NavBar({ item }) {
                     className=" object-contain"
                     src="src/images/icon-delete.svg"
                     alt=""
+                    onClick={Delete}
                   />
                 </div>
                 <div className=" bg-FEOrange text-FEWhite text-center rounded-lg py-4 font-bold">

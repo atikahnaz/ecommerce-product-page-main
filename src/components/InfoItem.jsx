@@ -3,7 +3,7 @@ import Cart from "../images/icon-cart.svg";
 import Minus from "../images/icon-minus.svg";
 import Plus from "../images/icon-plus.svg";
 
-function InfoItem() {
+function InfoItem({ callbackUpdateCart }) {
   return (
     <>
       <div className=" font-FEKumbhSans m-6">
@@ -19,12 +19,12 @@ function InfoItem() {
           the weather can offer.
         </h6>
       </div>
-      <PriceItem />
+      <PriceItem callback={callbackUpdateCart} />
     </>
   );
 }
 
-function PriceItem() {
+function PriceItem({ callback }) {
   const [quantity, setQuantity] = useState(0);
 
   const Add = () => {
@@ -36,7 +36,6 @@ function PriceItem() {
   };
 
   // callback function
-  const AddToCart = () => {};
 
   return (
     <div className="font-FEKumbhSans m-6">
@@ -54,9 +53,12 @@ function PriceItem() {
         <div className="font-bold">{quantity}</div>
         <img className="object-contain" onClick={Add} src={Plus} alt="" />
       </div>
+
       <div
         className="flex items-center justify-center bg-FEOrange py-4 rounded-xl"
-        onClick={AddToCart}
+        onClick={() => {
+          callback(quantity);
+        }}
       >
         <img src={Cart} className="" alt="" />
         <div className=" text-FEWhite font-bold">Add to cart</div>

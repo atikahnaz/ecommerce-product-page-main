@@ -73,22 +73,62 @@ Images located inside public folder(not process by webpack). (if src/images, the
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+2. Updating cart
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+using callback function to pass data
+
+```jsx
+function App() {
+const updateCart = (total) => {
+  setQuantity(total);
+};
+}
+
+return (
+<InfoItem callbackUpdateCart={updateCart} />;
+)
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```jsx
+function InfoItem({ callbackUpdateCart }) {
+  return <PriceItem callback={callbackUpdateCart} />;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+```jsx
+function PriceItem({ callback }) {
+  return (
+  <div className="flex items-center justify-center bg-FEOrange py-4 rounded-xl"
+        onClick={() => {
+          callback(quantity);
+        }}
+      >)
+}
+```
+
+3. Remove item
+
+```jsx
+function App() {
+  const deleteItem = () => {
+    setQuantity(0);
+  };
+}
+
+return <NavBar item={item} toRemove={deleteItem} />;
+```
+
+```jsx
+function NavBar({ item, toRemove }) {
+  return (
+    <img
+      className=" object-contain"
+      src="src/images/icon-delete.svg"
+      alt=""
+      onClick={Delete}
+    />
+  );
+}
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
