@@ -3,10 +3,12 @@ import Logo from "../images/logo.svg";
 import Menu from "../images/icon-menu.svg";
 import Cart from "../images/icon-cart.svg";
 import Profile from "../images/image-avatar.png";
+import CollapseMenu from "./CollapseMenu";
 
 function NavBar({ item, toRemove }) {
   const [cartItem, setCartItem] = useState(item);
   const [cartVisible, setCartVisible] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     setCartItem(item);
@@ -20,11 +22,21 @@ function NavBar({ item, toRemove }) {
     toRemove();
   };
 
+  const ShowMenuBar = () => {
+    setShowMenu(showMenu === false ? true : false);
+  };
+
   return (
     <>
-      <div className=" flex  m-6 justify-between ">
+      {showMenu && <CollapseMenu />}
+      <div className=" flex  m-6 justify-between">
         <div className="flex ">
-          <img className="object-contain" src={Menu}></img>
+          <img
+            className="object-contain"
+            src={Menu}
+            onClick={ShowMenuBar}
+          ></img>
+
           <img className="object-contain pl-3" src={Logo}></img>
         </div>
         <div className="flex ">

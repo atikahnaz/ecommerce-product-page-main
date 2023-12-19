@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <div className="">
+      <div>
         <NavBar item={item} toRemove={deleteItem} />
         <ImagePreview slides={Slides} />
 
