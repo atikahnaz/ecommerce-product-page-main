@@ -10,10 +10,10 @@ function InfoItem({ callbackUpdateCart }) {
         <h6 className=" text-xs font-bold tracking-1 text-FEOrange mb-3  ">
           SNEAKER COMPANY
         </h6>
-        <h1 className=" text-3xl font-bold mb-3 md:text-5xl">
+        <h1 className=" text-3xl font-bold mb-3 md:text-6xl">
           Fall Limited Edition Sneakers
         </h1>
-        <h6 className=" text-base text-FEDarkGrayishBlue mb-3 tracking-tight md:text-xl">
+        <h6 className=" text-base text-FEDarkGrayishBlue mb-3 tracking-tight md:text-xl md:tracking-normal ">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
@@ -51,7 +51,7 @@ function PriceItem({ callback }) {
           $250.00
         </div>
       </div>
-      <div className="md:flex">
+      <div className="md:flex cursor-pointer">
         <div className="flex justify-between items-center bg-FELightGrayishBlue py-4 px-5 rounded-xl mb-5 md:w-1/3 md:mb-0 md:mr-3">
           <img
             className=" object-contain"

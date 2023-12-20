@@ -29,7 +29,7 @@ function NavBar({ item, toRemove }) {
   return (
     <>
       {showMenu && <CollapseMenu />}
-      <div className=" flex  m-6 justify-between md:py-5 md:border-b-2">
+      <div className=" flex  m-6 justify-between md:py-5 md:border-b-2 cursor-pointer">
         <div className="flex md:items-baseline">
           <img
             className="object-contain md:hidden"
@@ -96,7 +96,7 @@ function NavBar({ item, toRemove }) {
                     onClick={Delete}
                   />
                 </div>
-                <div className=" bg-FEOrange text-FEWhite text-center rounded-lg py-4 font-bold">
+                <div className=" bg-FEOrange text-FEWhite text-center rounded-lg py-4 font-bold cursor-pointer">
                   Checkout
                 </div>
               </div>

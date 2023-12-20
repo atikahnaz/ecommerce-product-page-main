@@ -25,13 +25,13 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="md:mx-24">
         <NavBar item={item} toRemove={deleteItem} />
-        <div className="md:flex md:items-center md:mx-12">
+        <div className="md:flex md:items-center md:mx-24">
           <div className="md:">
             <ImagePreview slides={Slides} />
           </div>
-          <div className="md:px-14">
+          <div className="md:ml-24">
             <InfoItem callbackUpdateCart={updateCart} />
           </div>
         </div>

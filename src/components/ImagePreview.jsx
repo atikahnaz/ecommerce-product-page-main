@@ -5,6 +5,7 @@ import Previous from "../images/icon-previous.svg";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
+  const [lightBoxGallery, setLightBoxGallery] = useState(false);
   const length = slides.length;
 
   const NextImage = () => {
@@ -15,13 +16,23 @@ function ImagePreview({ slides }) {
     setImageIndex(imageIndex === 0 ? length - 1 : imageIndex - 1);
   };
 
+  const closeGallery = () => {
+    setLightBoxGallery(false);
+  };
+
+  const openGallery = () => {
+    setLightBoxGallery(true);
+  };
+
   return (
     <>
-      <div className="hidden md:flex md:flex-col md:w-full">
+      {/**image gallery desktop */}
+
+      <div className="hidden md:flex flex-col w-full mt-16">
         <div className=" mb-10">
           <img src={slides[imageIndex].img} alt="" className=" rounded-2xl" />
         </div>
-        <div className="flex space-x-6">
+        <div className="flex space-x-6" onClick={openGallery}>
           <img
             src="src/images/image-product-1-thumbnail.jpg"
             alt=""
@@ -44,6 +55,60 @@ function ImagePreview({ slides }) {
           />
         </div>
       </div>
+
+      {/**lightbox gallery */}
+
+      {lightBoxGallery && (
+        <>
+          <div className="hidden md:flex absolute top-0 left-0 w-screen h-screen bg-FEPaleOrange opacity-80"></div>
+          <div className="absolute top-0 left-0 w-screen h-screen ">
+            <div className="flex flex-col w-full h-full justify-center items-center">
+              <div className="w-1/3 h-auto object-contain ">
+                <img
+                  src="src/images/icon-close.svg"
+                  alt=""
+                  className=" "
+                  onClick={closeGallery}
+                />
+                <img
+                  src={slides[imageIndex].img}
+                  alt=""
+                  className="rounded-xl"
+                />
+              </div>
+
+              <div className="flex w-1/3">
+                <img
+                  src="src/images/image-product-1-thumbnail.jpg"
+                  alt=""
+                  className="flex-1 w-1/5 object-cover rounded-lg"
+                />
+                <img
+                  src="src/images/image-product-2-thumbnail.jpg"
+                  alt=""
+                  className="flex-1 w-1/5 object-cover rounded-lg"
+                />
+                <img
+                  src="src/images/image-product-3-thumbnail.jpg"
+                  alt=""
+                  className="flex-1 w-1/5 object-cover rounded-lg"
+                />
+                <img
+                  src="src/images/image-product-4-thumbnail.jpg"
+                  alt=""
+                  className="flex-1 w-1/5 object-cover rounded-lg"
+                />
+              </div>
+              {/**<img
+              src={slides[imageIndex].img}
+              alt=""
+              className="w-1/3 h-auto object-contain "
+            /> */}
+            </div>
+            <div></div>
+          </div>
+        </>
+      )}
 
       {/**image preview for mobile */}
       <div className="relative h-72 md:hidden">
