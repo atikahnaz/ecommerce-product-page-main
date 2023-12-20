@@ -40,29 +40,39 @@ function PriceItem({ callback }) {
   return (
     <div className="font-FEKumbhSans m-6">
       <div className="flex justify-between items-center mb-5">
-        <div className=" font-bold text-4xl">$125.00</div>
-        <div className=" text-FEOrange bg-FEPaleOrange font-bold py-1 px-2 rounded-lg">
-          50%
+        <div className="flex flex-row items-center">
+          <div className=" font-bold text-4xl mr-3">$125.00</div>
+          <div className=" text-FEOrange bg-FEPaleOrange font-bold py-1 px-2 rounded-lg">
+            50%
+          </div>
         </div>
+
         <div className=" text-FEGrayishBlue deco font-bold line-through">
           $250.00
         </div>
       </div>
-      <div className="flex justify-between items-center bg-FELightGrayishBlue py-4 px-5 rounded-xl mb-5">
-        <img className=" object-contain" onClick={Remove} src={Minus} alt="" />
-        <div className="font-bold">{quantity}</div>
-        <img className="object-contain" onClick={Add} src={Plus} alt="" />
-      </div>
+      <div className="md:flex">
+        <div className="flex justify-between items-center bg-FELightGrayishBlue py-4 px-5 rounded-xl mb-5 md:w-1/3 md:mb-0 md:mr-3">
+          <img
+            className=" object-contain"
+            onClick={Remove}
+            src={Minus}
+            alt=""
+          />
+          <div className="font-bold">{quantity}</div>
+          <img className="object-contain" onClick={Add} src={Plus} alt="" />
+        </div>
 
-      <div
-        className="flex items-center justify-center bg-FEOrange py-4 rounded-xl"
-        onClick={() => {
-          callback(quantity);
-        }}
-      >
-        <img src={Cart} className=" text-white" alt="" />
+        <div
+          className="flex items-center justify-center bg-FEOrange py-4 rounded-xl md:w-2/3 "
+          onClick={() => {
+            callback(quantity);
+          }}
+        >
+          <img src={Cart} className=" text-white" alt="" />
 
-        <div className=" text-FEWhite font-bold">Add to cart</div>
+          <div className=" text-FEWhite font-bold">Add to cart</div>
+        </div>
       </div>
     </div>
   );

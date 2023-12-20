@@ -51,8 +51,8 @@ function NavBar({ item, toRemove }) {
       </div>
 
       {cartVisible && (
-        <div className="font-FEKumbhSans text-base absolute top-24 z-10 w-full h-full flex justify-center">
-          <div className=" bg-white w-11/12 h-2/5 p-4 rounded-md">
+        <div className="font-FEKumbhSans text-base absolute top-24 z-10 w-full  flex justify-center md:w-96 md:right-4">
+          <div className=" bg-white w-11/12 h-1/3 p-4 rounded-md shadow-xl">
             <div className=" font-bold mb-3">Cart</div>
             <div
               className=" border-b-2"
@@ -89,7 +89,7 @@ function NavBar({ item, toRemove }) {
                 </div>
               </div>
             ) : (
-              <div className="flex justify-center h-2/4 items-center ">
+              <div className="flex justify-center my-14 items-center ">
                 Cart is empty
               </div>
             )}
