@@ -29,15 +29,23 @@ function NavBar({ item, toRemove }) {
   return (
     <>
       {showMenu && <CollapseMenu />}
-      <div className=" flex  m-6 justify-between">
-        <div className="flex ">
+      <div className=" flex  m-6 justify-between md:py-5 md:border-b-2">
+        <div className="flex md:items-baseline">
           <img
-            className="object-contain"
+            className="object-contain md:hidden"
             src={Menu}
             onClick={ShowMenuBar}
           ></img>
 
           <img className="object-contain pl-3" src={Logo}></img>
+          {/**menu bar for desktop */}
+          <div className="hidden md:flex space-x-10 ml-10  text-FEGrayishBlue font-FEKumbhSans font-bold">
+            <div>Collection</div>
+            <div>Men</div>
+            <div>Women</div>
+            <div>About</div>
+            <div>Contact</div>
+          </div>
         </div>
         <div className="flex ">
           <img
@@ -46,7 +54,11 @@ function NavBar({ item, toRemove }) {
             alt="cart"
             onClick={ViewCart}
           />
-          <img className="w-5 h-auto ml-5" src={Profile} alt="profile" />
+          <img
+            className="w-5 h-auto ml-5 md:w-10"
+            src={Profile}
+            alt="profile"
+          />
         </div>
       </div>
 
