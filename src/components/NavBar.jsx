@@ -48,14 +48,23 @@ function NavBar({ item, toRemove }) {
           </div>
         </div>
         <div className="flex ">
+          {/**cart notifications */}
+          <div className="flex items-center relative">
+            <img
+              className="object-contain "
+              src={Cart}
+              alt="cart"
+              onClick={ViewCart}
+            />
+            {cartItem.quantity > 0 && (
+              <div className=" bg-FEOrange rounded-full w-5 h-5 text-sm text-center absolute top-0 left-4">
+                {cartItem.quantity}
+              </div>
+            )}
+          </div>
+
           <img
-            className="object-contain "
-            src={Cart}
-            alt="cart"
-            onClick={ViewCart}
-          />
-          <img
-            className="w-5 h-auto ml-5 md:w-10"
+            className="w-5 h-auto ml-5 md:w-10 md:ml-10"
             src={Profile}
             alt="profile"
           />
