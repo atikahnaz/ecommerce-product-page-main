@@ -29,25 +29,52 @@ function NavBar({ item, toRemove }) {
   return (
     <>
       {showMenu && <CollapseMenu />}
-      <div className=" flex  m-6 justify-between md:py-5 md:border-b-2 cursor-pointer">
-        <div className="flex md:items-baseline">
+      <div className="flex lg:relative m-6 justify-between lg:py-10 lg:border-b-2  lg:items-center cursor-pointer">
+        <div className="flex  lg:items-baseline  ">
           <img
-            className="object-contain md:hidden"
+            className="object-contain lg:hidden"
             src={Menu}
             onClick={ShowMenuBar}
           ></img>
 
-          <img className="object-contain pl-3" src={Logo}></img>
+          <img className="object-contain pl-3 lg:hidden" src={Logo}></img>
+
           {/**menu bar for desktop */}
-          <div className="hidden md:flex space-x-10 ml-10  text-FEGrayishBlue font-FEKumbhSans font-bold">
-            <div>Collection</div>
-            <div>Men</div>
-            <div>Women</div>
-            <div>About</div>
-            <div>Contact</div>
+          <div className="hidden lg:flex absolute h-full bottom-0 items-center space-x-10  text-FEGrayishBlue font-FEKumbhSans">
+            <img className="object-contain" src={Logo}></img>
+            <a
+              href="#"
+              className="flex items-center h-full focus:border-b-4 focus:border-FEOrange focus:text-FEVeryDarkBlue"
+            >
+              Collection
+            </a>
+            <a
+              href="#"
+              className="flex items-center h-full focus:border-b-4 focus:border-FEOrange focus:text-FEVeryDarkBlue"
+            >
+              Men
+            </a>
+            <a
+              href="#"
+              className="flex items-center h-full focus:border-b-4 focus:border-FEOrange focus:text-FEVeryDarkBlue"
+            >
+              Women
+            </a>
+            <a
+              href="#"
+              className="flex items-center h-full focus:border-b-4 focus:border-FEOrange focus:text-FEVeryDarkBlue"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="flex items-center h-full focus:border-b-4 focus:border-FEOrange focus:text-FEVeryDarkBlue"
+            >
+              Contact
+            </a>
           </div>
         </div>
-        <div className="flex ">
+        <div className="flex lg:absolute right-10">
           {/**cart notifications */}
           <div className="flex items-center relative">
             <img
@@ -57,7 +84,7 @@ function NavBar({ item, toRemove }) {
               onClick={ViewCart}
             />
             {cartItem.quantity > 0 && (
-              <div className=" bg-FEOrange rounded-full w-5 h-5 text-sm text-center absolute top-0 left-4">
+              <div className=" bg-FEOrange text-FEWhite rounded-full w-5 h-5 text-xs  absolute flex items-center justify-center -top-1 lg:top-0 left-4 lg:left-4">
                 {cartItem.quantity}
               </div>
             )}
@@ -72,7 +99,7 @@ function NavBar({ item, toRemove }) {
       </div>
 
       {cartVisible && (
-        <div className="font-FEKumbhSans text-base absolute top-24 z-10 w-full  flex justify-center md:w-96 md:right-4">
+        <div className="font-FEKumbhSans text-base absolute top-24 z-10 w-full  flex justify-center lg:w-96 lg:right-20">
           <div className=" bg-white w-11/12 h-1/3 p-4 rounded-md shadow-xl">
             <div className=" font-bold mb-3">Cart</div>
             <div
