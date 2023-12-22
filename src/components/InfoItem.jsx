@@ -69,7 +69,7 @@ function PriceItem({ callback }) {
             callback(quantity);
           }}
         >
-          <img src={Cart} className=" text-white" alt="" />
+          <img src={Cart} className="mr-3" alt="" />
 
           <div className=" text-FEWhite font-bold">Add to cart</div>
         </div>

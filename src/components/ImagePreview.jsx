@@ -32,8 +32,8 @@ function ImagePreview({ slides }) {
       {/**image gallery desktop */}
 
       <div className="hidden md:flex flex-col w-full mt-16">
-        <div className=" mb-10">
-          <img src={slides[imageIndex].img} alt="" className=" rounded-2xl" />
+        <div className=" mb-10 ">
+          <img src={slides[imageIndex].img} alt="" className=" rounded-2xl " />
         </div>
         <div className="flex space-x-6 cursor-pointer" onClick={openGallery}>
           <img
@@ -105,34 +105,50 @@ function ImagePreview({ slides }) {
               </div>
 
               {/**thumbnail image lightbox gallery */}
-              <div className="flex w-1/4 space-x-5 mt-6">
-                <div className="flex-1 w-1/5">
+
+              <div className="flex w-1/4 space-x-5 mt-6 ">
+                <div className="flex-1 w-1/5 bg-white rounded-lg">
                   <img
                     src="src/images/image-product-1-thumbnail.jpg"
                     alt=""
-                    className="rounded-lg object-contain hover:contrast-50 border-2 border-FEOrange"
+                    className={` rounded-lg object-contain hover:opacity-50 ${
+                      imageIndex === 0 ? "border-2 border-FEOrange" : ""
+                    }`}
                     onClick={() => setImageIndex(0)}
                   />
                 </div>
 
-                <img
-                  src="src/images/image-product-2-thumbnail.jpg"
-                  alt=""
-                  className="flex-1 w-1/5 object-cover rounded-lg"
-                  onClick={() => setImageIndex(1)}
-                />
-                <img
-                  src="src/images/image-product-3-thumbnail.jpg"
-                  alt=""
-                  className="flex-1 w-1/5 object-cover rounded-lg"
-                  onClick={() => setImageIndex(2)}
-                />
-                <img
-                  src="src/images/image-product-4-thumbnail.jpg"
-                  alt=""
-                  className="flex-1 w-1/5 object-cover rounded-lg"
-                  onClick={() => setImageIndex(3)}
-                />
+                <div className="flex-1 w-1/5 bg-white rounded-lg">
+                  <img
+                    src="src/images/image-product-2-thumbnail.jpg"
+                    alt=""
+                    className={`rounded-lg object-contain hover:opacity-50 ${
+                      imageIndex === 1 ? "border-2 border-FEOrange" : ""
+                    }`}
+                    onClick={() => setImageIndex(1)}
+                  />
+                </div>
+                <div className="flex-1 w-1/5 bg-white rounded-lg">
+                  <img
+                    src="src/images/image-product-3-thumbnail.jpg"
+                    alt=""
+                    className={`rounded-lg object-contain hover:opacity-50 ${
+                      imageIndex === 2 ? "border-2 border-FEOrange" : ""
+                    }`}
+                    onClick={() => setImageIndex(2)}
+                  />
+                </div>
+
+                <div className="flex-1 w-1/5 bg-white rounded-lg">
+                  <img
+                    src="src/images/image-product-4-thumbnail.jpg"
+                    alt=""
+                    className={`rounded-lg object-contain hover:opacity-50 ${
+                      imageIndex === 3 ? "border-2 border-FEOrange" : ""
+                    }`}
+                    onClick={() => setImageIndex(3)}
+                  />
+                </div>
               </div>
               {/**<img
               src={slides[imageIndex].img}
@@ -151,7 +167,7 @@ function ImagePreview({ slides }) {
           <img
             src={slides[imageIndex].img}
             alt=""
-            className="absolute w-full h-full object-cover object-center  "
+            className="absolute w-full h-full object-cover object-center"
           />
         </div>
 
