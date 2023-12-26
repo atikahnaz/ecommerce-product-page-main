@@ -28,7 +28,7 @@ function App() {
       <div className="lg:mx-24">
         <NavBar item={item} toRemove={deleteItem} />
         <div className="lg:flex lg:items-center lg:mx-24">
-          <div className="lg:">
+          <div className="">
             <ImagePreview slides={Slides} />
           </div>
           <div className="lg:ml-24">

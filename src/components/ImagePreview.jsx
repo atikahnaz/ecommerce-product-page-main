@@ -63,8 +63,8 @@ function ImagePreview({ slides }) {
 
       {lightBoxGallery && (
         <>
-          <div className="hidden md:flex absolute top-0 left-0 w-screen h-screen bg-FEBlackLightBox opacity-80"></div>
-          <div className="absolute top-0 left-0 w-screen h-screen ">
+          <div className="hidden md:flex absolute top-0 left-0 w-screen h-screen bg-FEBlackLightBox opacity-80 z-50"></div>
+          <div className="absolute top-0 left-0 w-screen h-screen z-50">
             <div className="flex flex-col w-full h-full justify-center items-center">
               <div className="w-1/3 h-auto object-contain ">
                 <div className="flex justify-end">
@@ -106,7 +106,7 @@ function ImagePreview({ slides }) {
 
               {/**thumbnail image lightbox gallery */}
 
-              <div className="flex w-1/4 space-x-5 mt-6 ">
+              <div className="flex w-1/4 space-x-5 mt-6">
                 <div className="flex-1 w-1/5 bg-white rounded-lg">
                   <img
                     src="src/images/image-product-1-thumbnail.jpg"
@@ -162,7 +162,7 @@ function ImagePreview({ slides }) {
       )}
 
       {/**image preview for mobile */}
-      <div className="relative h-72 md:hidden">
+      <div className="relative h-80 md:hidden">
         <div className="">
           <img
             src={slides[imageIndex].img}
