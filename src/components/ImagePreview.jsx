@@ -2,6 +2,7 @@ import { useState } from "react";
 import Images from "../images.json";
 import Next from "../images/icon-next.svg";
 import Previous from "../images/icon-previous.svg";
+import Thumbnail1 from "../images/image-product-1-thumbnail.jpg";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -37,7 +38,7 @@ function ImagePreview({ slides }) {
         </div>
         <div className="flex space-x-6 cursor-pointer" onClick={openGallery}>
           <img
-            src="images/image-product-1-thumbnail.jpg"
+            src={Thumbnail1}
             alt=""
             className="flex-1 w-1/5 object-cover rounded-lg hover:opacity-25"
           />
