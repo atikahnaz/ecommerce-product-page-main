@@ -37,7 +37,7 @@ function ImagePreview({ slides }) {
         <div className=" mb-10 ">
           <img src={slides[imageIndex].img} alt="" className=" rounded-2xl " />
           <div>
-            <img src={Profile} alt="" />
+            <img src="/img/image-product-1-thumbnail.jpg" alt="" />
           </div>
         </div>
 
