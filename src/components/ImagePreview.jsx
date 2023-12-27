@@ -37,7 +37,7 @@ function ImagePreview({ slides }) {
         </div>
         <div className="flex space-x-6 cursor-pointer" onClick={openGallery}>
           <img
-            src="./images/image-product-1-thumbnail.jpg"
+            src="images/image-product-1-thumbnail.jpg"
             alt=""
             className="flex-1 w-1/5 object-cover rounded-lg hover:opacity-25"
           />
