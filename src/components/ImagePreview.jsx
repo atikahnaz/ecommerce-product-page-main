@@ -3,6 +3,7 @@ import Images from "../images.json";
 import Next from "../images/icon-next.svg";
 import Previous from "../images/icon-previous.svg";
 import t1 from "../images/image-product-1-thumbnail.jpg";
+import Profile from "../images/image-avatar.png";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -36,7 +37,7 @@ function ImagePreview({ slides }) {
         <div className=" mb-10 ">
           <img src={slides[imageIndex].img} alt="" className=" rounded-2xl " />
           <div>
-            <img src={t1} alt="" />
+            <img src={Profile} alt="" />
           </div>
         </div>
 
