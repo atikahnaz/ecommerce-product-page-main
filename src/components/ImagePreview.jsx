@@ -34,10 +34,11 @@ function ImagePreview({ slides }) {
       <div className="hidden md:flex flex-col w-full mt-16">
         <div className=" mb-10 ">
           <img src={slides[imageIndex].img} alt="" className=" rounded-2xl " />
+          <div>
+            <img src="/img/image-product-1-thumbnail.jpg" alt="" />
+          </div>
         </div>
-        <div>
-          <img src="img/image-product-1-thumbnail.jpg" alt="" />
-        </div>
+
         <div className="flex space-x-6 cursor-pointer" onClick={openGallery}>
           <img
             src="/img/image-product-1-thumbnail.jpg"
