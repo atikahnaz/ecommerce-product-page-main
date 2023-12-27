@@ -110,7 +110,7 @@ function ImagePreview({ slides }) {
                 </div>
               </div>
 
-              {/**thumbnail image lightbox gallery */}
+              {/**thumbnail image lightbox gallery 
 
               <div className="flex w-1/4 space-x-5 mt-6">
                 <div className="flex-1 w-1/5 bg-white rounded-lg">
@@ -155,7 +155,7 @@ function ImagePreview({ slides }) {
                     onClick={() => setImageIndex(3)}
                   />
                 </div>
-              </div>
+              </div>*/}
               {/**<img
               src={slides[imageIndex].img}
               alt=""
