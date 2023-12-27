@@ -1,9 +1,8 @@
 import { useState } from "react";
-import Images from "../images.json";
 import Next from "../images/icon-next.svg";
 import Previous from "../images/icon-previous.svg";
-import t1 from "../images/image-product-1-thumbnail.jpg";
 import Profile from "../images/image-avatar.png";
+import T1 from "/img/image-product-1-thumbnail.jpg";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -37,7 +36,7 @@ function ImagePreview({ slides }) {
         <div className=" mb-10 ">
           <img src={slides[imageIndex].img} alt="" className=" rounded-2xl " />
           <div>
-            <img src={Profile} alt="" />
+            <img src={T1} alt="" />
           </div>
         </div>
 
