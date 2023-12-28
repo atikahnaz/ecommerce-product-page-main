@@ -3,6 +3,7 @@ import Next from "../images/icon-next.svg";
 import Previous from "../images/icon-previous.svg";
 import Profile from "../images/image-avatar.png";
 import T1 from "/img/image-product-1-thumbnail.jpg";
+import Thumbnail from "../thumbnailpicture.json";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -35,14 +36,11 @@ function ImagePreview({ slides }) {
       <div className="hidden md:flex flex-col w-full mt-16">
         <div className=" mb-10 ">
           <img src={slides[imageIndex].img} alt="" className=" rounded-2xl " />
-          <div>
-            <img src={T1} alt="" />
-          </div>
         </div>
 
         <div className="flex space-x-6 cursor-pointer" onClick={openGallery}>
           <img
-            src="/img/image-product-1-thumbnail.jpg"
+            src={Thumbnail[0].img}
             alt=""
             className="flex-1 w-1/5 object-cover rounded-lg hover:opacity-25"
           />
@@ -114,7 +112,7 @@ function ImagePreview({ slides }) {
               <div className="flex w-1/4 space-x-5 mt-6">
                 <div className="flex-1 w-1/5 bg-white rounded-lg">
                   <img
-                    src="/img/image-product-1-thumbnail.jpg"
+                    src={Thumbnail[0].img}
                     alt=""
                     className={` rounded-lg object-contain hover:opacity-50 ${
                       imageIndex === 0 ? "border-2 border-FEOrange" : ""
@@ -125,7 +123,7 @@ function ImagePreview({ slides }) {
 
                 <div className="flex-1 w-1/5 bg-white rounded-lg">
                   <img
-                    src="/img/images/image-product-2-thumbnail.jpg"
+                    src="/img/image-product-2-thumbnail.jpg"
                     alt=""
                     className={`rounded-lg object-contain hover:opacity-50 ${
                       imageIndex === 1 ? "border-2 border-FEOrange" : ""
@@ -135,7 +133,7 @@ function ImagePreview({ slides }) {
                 </div>
                 <div className="flex-1 w-1/5 bg-white rounded-lg">
                   <img
-                    src="/img/images/image-product-3-thumbnail.jpg"
+                    src="/img/image-product-3-thumbnail.jpg"
                     alt=""
                     className={`rounded-lg object-contain hover:opacity-50 ${
                       imageIndex === 2 ? "border-2 border-FEOrange" : ""
@@ -146,7 +144,7 @@ function ImagePreview({ slides }) {
 
                 <div className="flex-1 w-1/5 bg-white rounded-lg">
                   <img
-                    src="/img/images/image-product-4-thumbnail.jpg"
+                    src="/img/image-product-4-thumbnail.jpg"
                     alt=""
                     className={`rounded-lg object-contain hover:opacity-50 ${
                       imageIndex === 3 ? "border-2 border-FEOrange" : ""
