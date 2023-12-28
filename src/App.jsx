@@ -10,7 +10,7 @@ function App() {
 
   const item = {
     name: "Fall Limited Edition Sneakers",
-    img: "Slide[0].img",
+    img: Slides[0].img,
     price: 125.0,
     quantity: quantity,
   };
