@@ -5,4 +5,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/ecommerce-product-page-main/",
+  assetsDir: "assets", // output directory for assets
+  publicDir: "public", // public directory containing static assets
 });
