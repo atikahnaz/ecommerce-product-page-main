@@ -4,6 +4,7 @@ import Previous from "../images/icon-previous.svg";
 import Profile from "../images/image-avatar.png";
 import T1 from "/img/image-product-1-thumbnail.jpg";
 import Thumbnail from "../thumbnailpicture.json";
+import thumbnail1 from "../../public/img/image-product-1-thumbnail.jpg";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -40,17 +41,17 @@ function ImagePreview({ slides }) {
 
         <div className="flex space-x-6 cursor-pointer" onClick={openGallery}>
           <img
-            src={Thumbnail[0].img}
+            src={thumbnail1}
             alt=""
             className="flex-1 w-1/5 object-cover rounded-lg hover:opacity-25"
           />
           <img
-            src="/img/image-product-2-thumbnail.jpg"
+            src="img/image-product-2-thumbnail.jpg"
             alt=""
             className="flex-1 w-1/5 object-cover rounded-lg hover:opacity-25"
           />
           <img
-            src="/img/image-product-3-thumbnail.jpg"
+            src="img/image-product-3-thumbnail.jpg"
             alt=""
             className="flex-1 w-1/5 object-cover rounded-lg hover:opacity-25"
           />
