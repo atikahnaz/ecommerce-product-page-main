@@ -1,9 +1,6 @@
 import { useState } from "react";
 import Next from "../images/icon-next.svg";
 import Previous from "../images/icon-previous.svg";
-import Profile from "../images/image-avatar.png";
-import T1 from "/img/image-product-1-thumbnail.jpg";
-import Thumbnail from "../thumbnailpicture.json";
 import thumbnail1 from "../../public/img/image-product-1-thumbnail.jpg";
 
 function ImagePreview({ slides }) {
