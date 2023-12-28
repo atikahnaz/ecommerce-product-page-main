@@ -37,7 +37,7 @@ function ImagePreview({ slides }) {
         <div className=" mb-10 ">
           <img src={slides[imageIndex].img} alt="" className=" rounded-2xl " />
         </div>
-        {/** 
+
         <div className="flex space-x-6 cursor-pointer" onClick={openGallery}>
           <img
             src={Thumbnail[0].img}
@@ -60,7 +60,6 @@ function ImagePreview({ slides }) {
             className="flex-1 w-1/5 object-cover rounded-lg hover:opacity-25"
           />
         </div>
-        */}
       </div>
 
       {/**lightbox gallery */}
@@ -108,7 +107,7 @@ function ImagePreview({ slides }) {
                 </div>
               </div>
 
-              {/**thumbnail image lightbox gallery 
+              {/**thumbnail image lightbox gallery */}
 
               <div className="flex w-1/4 space-x-5 mt-6">
                 <div className="flex-1 w-1/5 bg-white rounded-lg">
@@ -154,7 +153,7 @@ function ImagePreview({ slides }) {
                   />
                 </div>
               </div>
-              */}
+
               {/**<img
               src={slides[imageIndex].img}
               alt=""
