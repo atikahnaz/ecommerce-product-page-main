@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Next from "../images/icon-next.svg";
 import Previous from "../images/icon-previous.svg";
-import thumbnail1 from "../../public/img/image-product-1-thumbnail.jpg";
-import thumbnail2 from "../../public/img/image-product-2-thumbnail.jpg";
-import thumbnail3 from "../../public/img/image-product-3-thumbnail.jpg";
-import thumbnail4 from "../../public/img/image-product-4-thumbnail.jpg";
+import thumbnail1 from "../images/image-product-1-thumbnail.jpg";
+import thumbnail2 from "../images/image-product-2-thumbnail.jpg";
+import thumbnail3 from "../images/image-product-3-thumbnail.jpg";
+import thumbnail4 from "../images/image-product-4-thumbnail.jpg";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
