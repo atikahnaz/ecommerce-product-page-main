@@ -2,7 +2,6 @@
   "name": "ecommerce-product-page-main",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://atikahnaz.github.io/ecommerce-product-page-main/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
