@@ -10,10 +10,10 @@ function InfoItem({ callbackUpdateCart }) {
         <h6 className=" text-xs font-bold tracking-1 text-FEOrange mb-3 sm:text-base">
           SNEAKER COMPANY
         </h6>
-        <h1 className=" text-3xl font-bold mb-3 md:text-6xl">
+        <h1 className=" text-3xl font-bold mb-3 md:text-5xl md:mb-9">
           Fall Limited Edition Sneakers
         </h1>
-        <h6 className=" text-base text-FEDarkGrayishBlue mb-3 tracking-tight md:text-xl md:tracking-normal ">
+        <h6 className=" text-base text-FEDarkGrayishBlue mb-3 tracking-tight md:text-lg md:tracking-normal ">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
@@ -39,9 +39,9 @@ function PriceItem({ callback }) {
 
   return (
     <div className="font-FEKumbhSans m-6">
-      <div className="flex justify-between items-center mb-5 md:flex md:flex-col md:items-start">
+      <div className="flex justify-between items-center mb-5 md:flex md:flex-col md:items-start md:mb-10">
         <div className="flex flex-row items-center">
-          <div className=" font-bold text-4xl mr-3">$125.00</div>
+          <div className=" font-bold text-3xl mr-3">$125.00</div>
           <div className=" text-FEOrange bg-FEPaleOrange font-bold py-1 px-2 rounded-lg">
             50%
           </div>
@@ -64,7 +64,7 @@ function PriceItem({ callback }) {
         </div>
 
         <div
-          className="flex items-center justify-center bg-FEOrange py-4 rounded-xl md:w-2/3 "
+          className="flex items-center justify-center bg-FEOrange py-4 rounded-xl md:w-2/3"
           onClick={() => {
             callback(quantity);
           }}
