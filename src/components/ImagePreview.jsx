@@ -6,6 +6,8 @@ import thumbnail2 from "../images/image-product-2-thumbnail.jpg";
 import thumbnail3 from "../images/image-product-3-thumbnail.jpg";
 import thumbnail4 from "../images/image-product-4-thumbnail.jpg";
 import IconClose from "../images/icon-close.svg";
+import IconPrevious from "../images/icon-previous.svg";
+import IconNext from "../images/icon-next.svg";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -91,7 +93,7 @@ function ImagePreview({ slides }) {
                   {/**previous  */}
                   <div className="flex absolute top-1/2 -left-3 bg-white rounded-full w-10 h-10">
                     <img
-                      src="../images/icon-previous.svg"
+                      src={IconPrevious}
                       alt=""
                       className="p-3"
                       onClick={PreviousImage}
@@ -100,7 +102,7 @@ function ImagePreview({ slides }) {
                   {/**next  */}
                   <div className="flex absolute top-1/2 -right-6 bg-white rounded-full w-10 h-10">
                     <img
-                      src="../images/icon-next.svg"
+                      src={IconNext}
                       alt=""
                       className="p-3"
                       onClick={NextImage}
