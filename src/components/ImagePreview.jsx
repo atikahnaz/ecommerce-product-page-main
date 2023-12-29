@@ -5,6 +5,7 @@ import thumbnail1 from "../images/image-product-1-thumbnail.jpg";
 import thumbnail2 from "../images/image-product-2-thumbnail.jpg";
 import thumbnail3 from "../images/image-product-3-thumbnail.jpg";
 import thumbnail4 from "../images/image-product-4-thumbnail.jpg";
+import IconClose from "../images/icon-close.svg";
 
 function ImagePreview({ slides }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -73,7 +74,7 @@ function ImagePreview({ slides }) {
               <div className="w-1/3 h-auto object-contain ">
                 <div className="flex justify-end">
                   <img
-                    src="../images/icon-close.svg"
+                    src={IconClose}
                     alt=""
                     className="mb-4"
                     onClick={closeGallery}
