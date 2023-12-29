@@ -4,6 +4,8 @@ import Menu from "../images/icon-menu.svg";
 import Cart from "../images/icon-cart.svg";
 import Profile from "../images/image-avatar.png";
 import CollapseMenu from "./CollapseMenu";
+import DeleteIcon from "../images/icon-delete.svg";
+import Thumbnail1 from "../images/image-product-1-thumbnail.jpg";
 
 function NavBar({ item, toRemove }) {
   const [cartItem, setCartItem] = useState(item);
@@ -111,15 +113,15 @@ function NavBar({ item, toRemove }) {
                 <div className="flex justify-between my-5">
                   <img
                     className=" w-12 h-12 rounded-md"
-                    src="src/images/image-product-1-thumbnail.jpg"
+                    src={Thumbnail1}
                     alt=""
                   />
                   <div className=" text-FEDarkGrayishBlue">
                     <div className="">{cartItem.name}</div>
                     <div className="flex">
-                      <div>${cartItem.price}.00</div>
-                      <div> x </div>
-                      <div>{cartItem.quantity}</div>
+                      <div className="mr-1">${cartItem.price}.00</div>
+                      <div className="mr-1"> x </div>
+                      <div className="mr-1">{cartItem.quantity}</div>
                       <div className=" text-FEVeryDarkBlue font-bold">
                         ${cartItem.price * cartItem.quantity}.00
                       </div>
@@ -127,7 +129,7 @@ function NavBar({ item, toRemove }) {
                   </div>
                   <img
                     className=" object-contain"
-                    src="src/images/icon-delete.svg"
+                    src={DeleteIcon}
                     alt=""
                     onClick={Delete}
                   />
