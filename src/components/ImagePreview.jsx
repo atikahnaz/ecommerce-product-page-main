@@ -73,7 +73,7 @@ function ImagePreview({ slides }) {
               <div className="w-1/3 h-auto object-contain ">
                 <div className="flex justify-end">
                   <img
-                    src="src/images/icon-close.svg"
+                    src="../images/icon-close.svg"
                     alt=""
                     className="mb-4"
                     onClick={closeGallery}
@@ -90,7 +90,7 @@ function ImagePreview({ slides }) {
                   {/**previous  */}
                   <div className="flex absolute top-1/2 -left-3 bg-white rounded-full w-10 h-10">
                     <img
-                      src="src/images/icon-previous.svg"
+                      src="../images/icon-previous.svg"
                       alt=""
                       className="p-3"
                       onClick={PreviousImage}
@@ -99,7 +99,7 @@ function ImagePreview({ slides }) {
                   {/**next  */}
                   <div className="flex absolute top-1/2 -right-6 bg-white rounded-full w-10 h-10">
                     <img
-                      src="src/images/icon-next.svg"
+                      src="../images/icon-next.svg"
                       alt=""
                       className="p-3"
                       onClick={NextImage}
